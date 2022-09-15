@@ -1,5 +1,5 @@
 /**
- * The program shows how to get input
+ * The program uses albert einstines e=mc^2
  *   and deal with numbers.
  * By:      Jackson Naufali
  * Version: 1.0
@@ -9,14 +9,15 @@
 import promptSync from 'prompt-sync'
 
 const prompt = promptSync()
-
+const albert = 298800000
 // let ageNumber: number
 
-const ageString = prompt('How long is your wood?(m) ')
-
-const logNumber = parseFloat(ageString)
-const overallLog = logNumber * 20
-const answer = 1100 / overallLog
-console.log(`Amount of logs is >  ${answer}`)
-
+const ageString = prompt('Enter your mass!(Kg): ')
+const massNumber = parseFloat(ageString)
+if (massNumber > 0) {
+  const overallMass = massNumber * Math.pow(albert, 2)
+  console.log(`Amount of Energy is (J)>  ${overallMass}J!`)
+} else {
+  console.log('Invalid Input')
+}
 console.log('\nDone.')
